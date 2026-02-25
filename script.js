@@ -10,3 +10,20 @@ toggleBtn.addEventListener('click', () => {
         toggleBtn.textContent = 'Light Mode';
     }
 });
+
+const introText = "University Student | C Programmer | Unity Developer";
+let index = 0;
+
+function typeEffect() {
+    const heroParagraph = document.querySelector('header p');
+    if (index < introText.length) {
+        heroParagraph.innerHTML += introText.charAt(index);
+        index++;
+        setTimeout(typeEffect, 50);
+    }
+}
+
+window.onload = () => {
+    document.querySelector('header p').innerHTML = "";
+    typeEffect();
+};
