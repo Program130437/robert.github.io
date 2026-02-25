@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: #1f1f1f;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #1f1f1f, #121212);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Grid */
+#projects {
+    padding: 50px 10%;
+}
+
+project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+project-card {
+    background: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d4ff;
+}
+
+project-card h3 {
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9 rem;
+    color: #888;
+} 
+
+/* Light Mode Styles */
+body.light-theme {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+body.light-theme .project-card {
+    background: #f9f9f9;
+    border-color: #cccccc;
+    color: #1a1a1a;
+}
+
+body.light-theme nav {
+    background: #eeeeee;
+}
+
+/* Fix for the Hero Header text in Light Mode */
+body.light-theme header {
+    background: #f0f0f0;
+}
+
+body.light-theme header h1,
+body.light-theme #projects h2 {
+    color: #121212;
+}
+
